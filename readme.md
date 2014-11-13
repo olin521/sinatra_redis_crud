@@ -21,4 +21,4 @@ For those who want to learn to use sinatra with redis, here is but one option...
 
 created for hw assignmnet "koopa crud"
 
-
+if you spot any errors, please notify me, thanks.

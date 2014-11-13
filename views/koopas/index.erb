@@ -1,0 +1,16 @@
+<div>
+<ul><% @koopas.each do |koopa| %>
+	<li><a href="/koopas/<%= koopa["id"] %>">
+		<%= koopa["name"] %></a>
+		<br />
+		<br />
+		<img src="<%= koopa["photo_url"] %>"/>
+	</li>
+	<% end %>
+</ul>
+</div>
+<br />
+
+ <p><a href="/koopas/new">Add a Koopa to the list</a></p>
+
+

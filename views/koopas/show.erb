@@ -1,0 +1,33 @@
+<div>
+	<h1><%= @koopa["name"] %></h1>
+	<li>
+		<img src="<%= @koopa["photo_url"] %>" />
+		<br />
+		Shell Status: <%= @koopa["has_shell"] %>
+		<br />
+		Koopa color: <%= @koopa["color"] %>
+	</li>
+
+	<br />
+	<a href="/koopas">Go Back to All Koopas</a>
+	<br />
+
+	<form action="/koopas/<%= params[:id] %>/edit"method"LINK">
+		<input type="submit" value="Edit">
+	</form>
+	
+	<br />
+
+	
+	<form action="/koopas/<%= @koopa["id"] %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="Delete">
+</div>
+
+<!-- this page both displays information and allows users to edit or delete the information on the page.To extract data from db an instance varibale is repeatedly called @koopa, set earlier in the app.rb file which communicates and sets this page's scope of infomation.
+-->
+
+<!-- this page allows users to be directed to an edit page or delete the instance of @koopa. Both defined in the RESTful routes in app.rb.-->
+
+<!-- the delete verb appears as a post, part of the method override for both update and delete which have POST methods with hidden "_method" included.-->
+
